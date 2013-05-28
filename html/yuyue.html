@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"/> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" href="img/miicon1.png">
+<meta name="Keywords" content="韓国料理,飲み屋,宴会,貸切,焼き肉,レストラン">
+<meta name="Description" content="韓国料理美味楽のサイトです。">
+<title>美味楽予約</title>
+<link rel="stylesheet" href="css/reset.css" media="all">
+<link rel="stylesheet" href="css/global5.css" media="all">
+<script type="text/javascript" src="../lib/jquery-1.6.js"></script>
+<script type="text/javascript">
+
+var query = {};
+$(function(){ 
+  $("#exe").click(booking);
+  $("#clr").click(clearui);
+  /*
+	$("#selc").click(function(e){
+			alert(0);
+      query["course"] = e.target.id; 
+			alert(e.target.id);
+			alert("a="+query["course"]);
+  });
+  $("#num").change(function(){
+      alert($("#num").val());
+      query["number"] = $("#num").val(); 
+  });
+	*/
+});
+function booking(){
+	query["name"] = $("#name").val();
+	//alert(query["name"]);
+  query["org"] = $("#org").val();
+	//alert(query["org"]);
+  query["addr"] = $("#addr").val();
+	//alert(query["addr"]);
+  query["tel"] = $("#tel").val();
+	//alert(query["tel"]);
+  query["mail"] = $("#mail").val();
+	//alert(query["mail"]);
+  query["course"] = $('input[name="course"]:checked').val();
+	//alert(query["course"]);
+	query["nums"] = $("#nums").val();
+	//alert(query["nums"]);
+	 query["adddate"] = $("#adddate").val();
+	//alert(query["adddate"]);
+	query["calltime"] = $("#calltime").val();
+	//alert(query["calltime"]);
+  $.post("addmimi.php", query, function(res){$("#status").text(res);});
+}
+function clearui(){
+  $.each(["name","org","addr","tel", "mail","adddate","calltime"], function(){			
+     $("#" + this).val("");
+  });
+  $("#number").val(0);
+  $("#status").text("");
+  $("#name").focus();
+}
+</script>
+</head>
+<body bgcolor="#cadbdb">
+<div id="wrap">
+
+<header id="head">
+<h1>
+<a href="index.html"><img src="img/top1.jpg" alt="トップ"></a>
+</h1>
+<nav class="gnavi">
+<ul>
+<li><a href="yuyue.html" title="予約登録"><img src="img/chu.png" ></a></li>
+<li><a href="upmimi.htm" title="予約更新"><img src="img/geng.png" ></a></li>
+<li><a href="delmimi.htm" title="予約キャンセル"><img src="img/x.png" ></a></li>
+</ul>
+</nav>
+</header>
+</div>
+<article id="fmenu">
+<header>
+<h1>予約注意事項</h1>
+</header>
+<section>
+<p>確認の為予約前日連絡をさせて頂きます。<br/>連絡可能時間のご記入お願い申し上げます。</p>
+</section>
+</article>
+<table border="1" width =100% >
+<tr><th>お名前：</th><td><input type="text" id="name" size="35"/></td></tr>
+<tr><th>予約時間：</th><td><input type="text" id="org" size="35"placeholder="例：01/01/13:00"/></td></tr>
+<tr><th>ご住所：</th><td><input type="text" id="addr" size="35"/></td></tr>
+<tr><th>電話番号：</th><td><input type="text" id="tel" size="35"placeholder="例：03-0000-0000"/></td></tr>
+<tr><th>メルアド：</th><td><input type="text" id="mail" size="35"/></td></tr>
+<tr><th>連絡時間：</th><td><input type="text" id="calltime" size="35"placeholder="例：12:00-15:00"/></td></tr>
+<tr>
+ <th>コース選択</th>
+ <td id="selc">
+	<input type="radio" name="course" value="2000円コース" />2000円コース
+	<br/><input type="radio" name="course" value="2500円コース" />2500円コース<br/>
+	<input type="radio" name="course" value="3000円コース" />3000円コース<br/>
+	<input type="radio" name="course" value="単品" />単品
+	<!--
+	<input type="radio" name="course" value="ad" />2000円コース
+	&nbsp;&nbsp;<input type="radio" name="course" value="aw" />2500円コース<br/>
+	<input type="radio" name="course" value="bd" />3000円コース
+	&nbsp;&nbsp;<input type="radio" name="course" value="cd" />3000円コース
+  -->
+ </td>
+</tr>
+<tr><th>参加人数：</th>
+<td>
+ <select id="nums">
+   <option value="NA">選択</option>   
+   <option value="01">01人</option>   
+   <option value="02">02人</option>   
+   <option value="03">03人</option>   
+   <option value="04">04人</option>   
+   <option value="05">05人</option>   
+   <option value="06">06人</option>   
+   <option value="07">07人</option>   
+   <option value="08">08人</option>   
+   <option value="09">09人</option>   
+   <option value="10">10人</option>   
+   <option value="11">11人</option>
+　　<option value="12">12人</option>
+　　<option value="13">13人</option>
+　　<option value="14">14人</option>
+<option value="15">貸切</option>   
+ </select>
+ <tr>
+  <th colspan="2">
+   <input type="button" id="exe" value="  登録   "/>
+   <input type="button" id="clr" value=" クリア  "/>
+  </th>
+</tr>
+<tr><th>処理結果：</th><td id="status">&nbsp;</td></tr>
+</table>
+</body>
+</html>
+

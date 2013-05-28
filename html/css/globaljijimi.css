@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+html{
+}
+
+body{
+font-family:sans-serif;
+font-size:12px;
+background:#e6e6e6;
+overflow-x:hidden;
+}
+
+a:link{
+color:#066;
+}
+
+a:visited{
+color:#033;
+}
+
+a:active{
+color:#0CC;
+}
+
+#wrap{
+font-size:12px;
+}
+
+#head{
+box-shadow:0 2px 4px #ccc;
+}
+
+#head nav.hnavi{
+position:relative;
+padding:0 0 0 55px;
+}
+
+
+#items{
+margin:0 3px 3px 3px;
+}
+
+#items header{
+}
+
+#items header h1{
+margin:0 0 3px 0;
+padding:13px 10px;
+font-size:14px;
+font-weight:bold;
+color:#fff;
+background:#999;
+}
+
+#items .itemList{
+}
+
+@media screen and (min-width:500px) {
+	#items .itemList{
+	width:480px;
+	margin:0 auto;
+	}
+}
+
+#items .itemList:after{
+content:"";
+display:block;
+clear:both;
+}
+
+#items .itemList article{
+float:left;
+width:49%;
+margin:0 2% 5px 0;
+}
+
+#items .itemList article:nth-child(2n){
+margin:0 0 5px 0;
+}
+
+#items .itemList article a{
+display:block;
+padding:5px;
+font-size:10px;
+color:#333;
+text-decoration:none;
+background:#fff;
+}
+
+#items .itemList article a .tag{
+position:absolute;
+width:40px;
+height:15px;
+text-align:center;
+font-weight:bold;
+line-height:15px;
+color:#fff;
+background:#333;
+}
+
+#items .itemList article a .tag.sp{
+background:#f90;
+}
+
+#items .itemList article a .tag.new{
+background:#fc0;
+}
+
+#items .itemList article a .tag.pop{
+background:#f60;
+}
+
+#items .itemList article a .img{
+margin:0 0 6px 0;
+}
+
+#items .itemList article a .img img{
+width:100%;
+}
+
+#items .itemList article a h1{
+height:20px;
+margin:0 0 4px 0;
+overflow:hidden;
+}
+
+#items .itemList article a .price{
+}
+
+
+#itemArea{
+padding:5px 0 0 0;
+}
+
+#itemArea .head{
+margin:0 0 5px 0;
+}
+
+#itemArea .head h1{
+padding:12px 10px;
+font-size:14px;
+font-weight:bold;
+color:#fff;
+background:-webkit-gradient(linear, left top, left bottom, color-stop(1.00, #099), color-stop(0.00, #5BB4BD));
+background:-webkit-linear-gradient(top, #5BB4BD 0%, #099 100%);
+background:-moz-linear-gradient(top, #5BB4BD 0%, #099 100%);
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5BB4BD', endColorstr='#ff009999', GradientType=0 );
+background:linear-gradient(top, #5BB4BD 0%, #099 100%);
+border:#099 solid 1px;
+}
+
+#itemArea .snavi{
+margin:0 10px 10px 10px;
+}
+
+#itemArea .snavi ul{
+}
+
+#itemArea .snavi ul li{
+}
+
+#itemArea .snavi ul li a{
+position:relative;
+display:block;
+padding:14px 10px;
+font-weight:bold;
+text-decoration:none;
+color:#666;
+background:#fff;
+border:#ccc solid 1px;
+border-top:none;
+}
+
+#itemArea .snavi ul li a.on{
+background:#ddd;
+}
+
+#itemArea .snavi ul li a:after{
+content:"";
+position:absolute;
+right:10px;
+top:50%;
+display:block;
+width:8px;
+height:13px;
+margin:-7px 0 0 0;
+background:url(../img/all_arw01.png) no-repeat 0 0;
+-webkit-background-size:8px 13px;
+background-size:8px 13px;
+-webkit-transform:rotate(180deg);
+-moz-transform:rotate(180deg);
+transform:rotate(180deg);
+}
+
+#itemArea .snavi ul li:first-child a{
+border-radius:4px 4px 0 0;
+border-top:#ccc solid 1px;
+}
+
+#itemArea .snavi ul li:last-child a{
+border-radius:0 0 4px 4px;
+}
+
+#itemArea .snavi ul li:first-child a:after{
+background:url(../img/all_arw02.png) no-repeat 0 0;
+-webkit-background-size:8px 13px;
+background-size:8px 13px;
+}

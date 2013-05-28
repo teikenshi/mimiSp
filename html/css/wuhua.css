@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+html{
+}
+
+body{
+font-size:12px;
+}
+#wrap{
+}
+#head{
+padding:13px 0 0 0;
+}
+#head h1{
+margin:0 0 14px 0;
+font-size:20px;
+}
+#head h1 img{
+width:100%;
+}
+#fmenu{
+margin:0 10px 10px 10px;
+padding:14px 8px;
+background:#000;
+border-radius:4px;
+}
+
+#fmenu header{
+margin:0 0 10px 0;
+}
+
+#fmenu header h1{
+margin:0 0 14px 0;
+padding:0 0 0 4px;
+color:#fff;
+font-size:15px;
+font-weight:bold;
+line-height:1;
+border-left:#069 solid 4px;
+}
+
+#fmenu header p{
+}
+
+#fmenu header p img{
+width:100%;
+border-radius:4px;
+}
+
+#fmenu section{
+}
+
+
+#fmenu section dl{
+font-size:12px;
+line-height:1.6;
+color:#fff;
+}
+
+#fmenu section dl dt{
+width:160px;
+}
+
+#fmenu section dl dd{
+margin:-1.6em 0 4px 0;
+padding:0 0 4px 200px;
+border-bottom:#BBCDD3 dotted 1px;
+}
+
+#fmenu section dl dd:last-child{
+margin-bottom:0;
+padding-bottom:0;
+border-bottom:none;
+}
+
+

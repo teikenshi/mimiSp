@@ -1,0 +1,177 @@
+@charset "utf-8";
+html{
+}
+#head{
+padding:13px 0 0 0;
+}
+#head h1{
+margin:0 0 14px 0;
+font-size:20px;
+}
+#head h1 img{
+width:100%;
+}
+
+
+#head nav ul{
+display:-webkit-box;
+display:-moz-box;
+display:box;
+width:100%;
+padding:0px 0px;
+
+}
+
+#head nav ul li{
+-webkit-box-flex:1;
+-moz-box-flex:1;
+box-flex:1;
+}
+
+#head nav ul li a{
+display:block;
+height:100px;
+font-size:50px;
+text-align:center;
+text-decoration:none;
+line-height:100px;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+background:-webkit-gradient(linear, left top, left bottom, color-stop(1.00, #eee), color-stop(0.00, #fff));
+background:-webkit-linear-gradient(top, #fff 0%, #eee 100%);
+background:-moz-linear-gradient(top, #fff 0%, #eee 100%);
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffffff', endColorstr='#ffeeeeee', GradientType=0 );
+background:linear-gradient(top, #fff 0%, #eee 100%);
+
+}
+#head nav ul li a:after{
+content:attr(title);
+display:block;
+margin:2px 0 0 0;
+font-size:50px;
+}
+#head nav.gnavi ul li a{
+min-width:320px;
+font-size:50px;
+font-weight:bold;
+color:#fff;
+background:url(../img/hong.jpg);
+
+}
+article{
+font-size:0;
+}
+
+article div{
+width:100%;
+display:-webkit-box;
+display:-moz-box;
+display:box;
+margin:0 0 1px 0;
+}
+
+article div section{
+position:relative;
+display:flex;
+width:auto;
+height:250px;
+-webkit-box-flex:1;
+-moz-box-flex:1;
+box-flex:1;
+border-right:#000 solid 5px;
+margin:5px;
+}
+
+article div section.img01{
+background:url(../img/wuhuarou.jpg) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+
+article div section.img02{
+background:url(../img/jijimi1.png) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+
+article div section.img03{
+background:url(../img/nabe2.png) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+
+article div section.img04{
+background:url(../img/kimu.jpg) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+
+article div section.img05{
+background:url(../img/saradalei.jpg) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+
+article div section.img06{
+background:url(../img/ikpin.jpg) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+article div section.img07{
+background:url(../img/dokusen1.jpg) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+article div section.img08{
+background:url(../img/tige.jpg) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+article div section.img09{
+background:url(../img/mian.jpg) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+article div section.img10{
+background:url(../img/gukba.jpg) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+article div section.img11{
+background:url(../img/dok.jpg) no-repeat center top;
+background-size:cover;
+-webkit-background-size:cover;
+}
+article div section.img12{
+background:url(../img/drink.jpg) no-repeat center top;
+background-size:cover;
+
+article div section:last-child{
+border-right:none;
+}
+
+article div section a{
+display:block;
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+color:#fff;
+text-decoration:none;
+}
+
+article div section a p{
+position:absolute;
+left:10px;
+bottom:22px;
+font-size:16px;
+}
+
+article div section a h1{
+position:absolute;
+left:10px;
+bottom:10px;
+font-size:20px;
+}

@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/*------------------------------------------------
+   Layout
+------------------------------------------------*/
+html{
+}
+
+body{
+font-family:sans-serif;
+font-size:12px;
+overflow-x:hidden;
+}
+
+a:link{
+color:#066;
+}
+
+#wrap{
+font-size:12px;
+}
+
+#head{
+box-shadow:0 2px 4px #ccc;
+}
+#head h1 img{
+width:100%;
+}
+#head nav ul{
+width:100%;
+list-style:none;
+display:-webkit-box;
+display:-moz-box;
+display:box;
+}
+
+#head nav ul li{
+-webkit-box-flex:1;
+-moz-box-flex:1;
+box-flex:1;
+}
+
+#head nav ul li a{
+display:block;
+min-width:60px;
+height:50px;
+padding:6px 0 0 0;
+text-align:center;
+text-decoration:none;
+color:#666;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+background:-webkit-gradient(linear, left top, left bottom, color-stop(1.00, #eee), color-stop(0.00, #fff));
+background:-webkit-linear-gradient(top, #fff 0%, #eee 100%);
+background:-moz-linear-gradient(top, #fff 0%, #eee 100%);
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffffff', endColorstr='#ffeeeeee', GradientType=0 );
+background:linear-gradient(top, #fff 0%, #eee 100%);
+border-right:#ddd solid 1px;
+}
+
+#head nav ul li a:after{
+content:attr(title);
+display:block;
+margin:2px 0 0 0;
+font-size:11px;
+}
+
+#head nav ul li a img{
+width:23px;
+}
+#head nav.gnavi ul li a{
+min-width:100px;
+font-size:30px;
+font-weight:bold;
+color:#fff;
+background:url(../img/124.jpg);
+
+}
+#fmenu{
+margin:10px 10px 10px 10px;
+padding:14px 8px;
+background:#fca4a4;
+border-radius:4px;
+}
+
+#fmenu header{
+margin:0 0 10px 0;
+}
+
+#fmenu header h1{
+margin:0 0 14px 0;
+padding:0 0 0 4px;
+font-size:15px;
+font-weight:bold;
+line-height:1;
+border-left:#00ff00 solid 4px;
+color:#ffcc00;
+}
+
+#fmenu header p{
+}
+
+#fmenu section{
+}
+#fmenu section p{
+font-size:14px;
+line-height:1.2;
+color:#fff;
+}
+#contents{
+
+position:relative;
+margin:0 10px 10px 10px;
+padding:10px 8px;
+-webkit-box-shadow:1px 1px 2px #fff;
+box-shadow:1px 1px 2px #ddd;
+
+background:#fff;
+border-radius:4px;
+
+}
+#contents .main{
+padding:0 0 10px 0;
+
+}
+#contents .main h2{
+margin:0 0 20px 0;
+padding:0 0 0 4px;
+font-size:20px;
+font-weight:bold;
+line-height:1;
+border-left:#09C solid 4px;
+}

@@ -1,0 +1,171 @@
+@charset "utf-8";
+html{
+}
+#head{
+padding:13px 0 0 0;
+}
+#head h1{
+margin:0 0 14px 0;
+font-size:20px;
+}
+#head h1 img{
+width:100%;
+}
+
+
+#head nav ul{
+display:-webkit-box;
+display:-moz-box;
+display:box;
+width:100%;
+padding:0px 0px;
+
+}
+
+#head nav ul li{
+-webkit-box-flex:1;
+-moz-box-flex:1;
+box-flex:1;
+}
+
+#head nav ul li a{
+display:block;
+height:100px;
+font-size:50px;
+text-align:center;
+text-decoration:none;
+line-height:100px;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+background:-webkit-gradient(linear, left top, left bottom, color-stop(1.00, #eee), color-stop(0.00, #fff));
+background:-webkit-linear-gradient(top, #fff 0%, #eee 100%);
+background:-moz-linear-gradient(top, #fff 0%, #eee 100%);
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffffff', endColorstr='#ffeeeeee', GradientType=0 );
+background:linear-gradient(top, #fff 0%, #eee 100%);
+
+}
+#head nav ul li a:after{
+content:attr(title);
+display:block;
+margin:2px 0 0 0;
+font-size:50px;
+}
+#head nav.gnavi ul li a{
+min-width:320px;
+font-size:50px;
+font-weight:bold;
+color:#fff;
+background:url(../img/hong.jpg);
+
+}
+#contents{
+
+position:relative;
+margin:0 10px 10px 10px;
+padding:10px 8px;
+-webkit-box-shadow:1px 1px 2px #fff;
+box-shadow:1px 1px 2px #ddd;
+
+background:#fff;
+border-radius:4px;
+
+}
+#contents .main{
+padding:0 0 10px 0;
+
+}
+#contents .main h2{
+margin:0 0 30px 0;
+padding:0 0 0 4px;
+font-size:20px;
+font-weight:bold;
+line-height:1;
+border-left:#09C solid 4px;
+}
+
+#accessArea{
+}
+#contents{
+background:#b8b7b6;
+}
+
+#accessArea .txt{
+margin:0 0 20px 0;
+}
+#accessArea .txt h2{
+font-size:50px;
+}
+
+#accessArea .txt p{
+font-size:30px;
+line-height:1.6;
+padding:20px 0px 0px 0px;
+}
+#accessArea .txt p img{
+float:right;
+width:350px;
+padding:0 10px 6px 0;
+}
+#accessArea .txt p:after{
+content:"";
+display:block;
+clear:both;
+}
+
+
+
+#accessArea .map{
+margin:0 0 20px 0;
+padding:20px 0px 0px 0px;
+}
+#accessArea .map h2{
+font-size:50px;
+}
+#accessArea .map p{
+font-size:30px;
+line-height:1.6;
+padding:20px 0px 0px 0px;
+}
+
+#accessArea .map p iframe{
+float:right;
+width:350px;
+height:350px;
+overflow:hidden;
+padding:0 10px 0 0;
+}
+#accessArea .map p:after{
+content:"";
+display:block;
+clear:both;
+}
+#accessArea map2{
+margin:0 0 20px 0;
+}
+#accessArea .map2 p{
+font-size:20px;
+float:right;
+padding:0 10px 6px 0;
+}
+#accessArea .lunch p{
+margin 0 0 0 20px;
+font-size:20px;
+line-height:1.6;
+border-bottom:#515253 dotted 3px ;
+}
+#accessArea .lunch p img{
+float:right;
+width:200px;
+padding:0 20px 20px 0;
+}
+#accessArea .lunch p:after{
+content:"";
+display:block;
+clear:both;
+}
+#accessArea .lunch p:last-child{
+margin-bottom:0;
+padding-bottom:0;
+border-bottom:none;
+}

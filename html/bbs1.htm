@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"/> 
+<title>XmasパーティBBS</title>
+<link rel="stylesheet" href="css/reset.css" media="all">
+<link rel="stylesheet" href="css/global6.css" media="all">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" href="img/miicon.png">
+<meta name="Keywords" content="韓国料理,飲み屋,宴会,貸切,焼き肉,レストラン">
+<meta name="Description" content="韓国料理美味楽のサイトです。">
+<script type="text/javascript" src="../../lib/jquery-1.6.js"></script>
+<script type="text/javascript">
+var query = {};
+var head = "<table id='top'><tr>";
+$(function(){ 
+	query["page"] = 3;
+	$.get("revbbs.php", query, show);
+	$("#add").click(function(){
+		query = {};
+		query["name"] = $("#name").val();
+		query["email"] = $("#email").val();
+		query["msg"] = $("#msg").val();
+		$.post("addbbs.php", query, function(stat){
+			//if(parseInt(stat)){
+			if(stat){
+				$("#top").remove();
+				var query = {};
+				query["page"] = 3;
+				$.get("revbbs.php", query, show);
+				$.each(["name","email","msg"], function(){
+     				$("#"+this).val("");
+				});
+			}
+		});
+	});
+	$("#page").click(function(e){
+		if(e.target.id == "three"){
+			query["page"] = 3;
+		}else if(e.target.id == "ten"){
+			query["page"] = 6;
+		}else if(e.target.id == "all"){
+			query["page"] = "ALL";
+		}
+		$.get("revbbs.php", query, show);
+	});
+	//$("#clear").click(function(){
+	//	$("#top").remove();
+	//});
+});
+function show(out){
+	var body = "<table width=100%>";
+	var recs = out.split("<r>");
+	for(var i = 0; i <recs.length; i++){
+		body += "<tr>";
+		var flds = recs[i].split("<i>");
+		for(var j = 0; j <flds.length; j++){
+			if(j!=4){
+				body += "<td>  " + flds[j] + "  </td>";
+			}else{
+ 				body += "<tr><td colspan='4'> " + flds[j] + "</td></tr>"; 
+			}
+		}
+	}
+	body += "</table>";
+	$("#show").html(body);
+}
+</script>
+</head>
+<body bgcolor="#cadbdb">
+<header id="head">
+<h1>
+<a href="index.html"><img src="img/top1.jpg" alt="トップ"></a>
+</h1>
+</header>
+<h2 id="page" style="color: #aa0022">
+	<input type="button" id="three" value=" ３行表示 "/>
+	<input type="button" id="ten" value=" ６行表示 "/>
+	<input type="button" id="all" value=" 全行表示 "/>
+</h2>
+<span id="stat" ></span>
+<div id="show"></div>
+<hr/>
+<table >
+	<tr>
+		<td>名前：<input type='text' size='23' id='name'></td>
+		
+		<td><input type='button' id='add' value='　書き込み　'></td>
+	
+	</tr>
+	<tr>
+	<td>Email:<input type='text' size='24' id='email'/></td>
+</tr>
+	<tr>
+		<td colspan='3'><textarea id='msg' rows='4' cols='48'></textarea></td>
+	</tr>
+	
+</table>
+</body>
+</html>
+

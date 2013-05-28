@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"/> 
+<title>XmasパーティBBS</title>
+<script type="text/javascript" src="../../lib/jquery-1.6.js"></script>
+<script type="text/javascript">
+var query = {};
+var head = "<table id='top'><tr>";
+$(function(){ 
+	query["page"] = 3;
+	rev(query);
+	$("#page").click(function(e){
+		if(e.target.id == "three"){
+			query["page"] = 3;
+		}else if(e.target.id == "ten"){
+			query["page"] = 6;
+		}else if(e.target.id == "all"){
+			query["page"] = "ALL";
+		}
+		rev(query);
+	});
+	$("#add").click(function(){
+		query = {};
+		query["name"] = $("#name").val();
+		query["email"] = $("#email").val();
+		query["msg"] = $("#msg").val();
+		$.post("addbbs.php", query, function(stat){
+			if(parseInt(stat)){
+				$("#top").remove();
+				var query = {};
+				query["page"] = 3;
+				rev(query);
+				$.each(["name","email","msg"], function(){
+     				$("#"+this).val("");
+				});
+			}
+		});
+		
+	});
+	$("#clear").click(function(){
+		$("#top").remove();
+	});
+});
+function rev(query){
+	$.get("revbbs.php", query, show);
+}
+function show(out){
+	var body = "<table width='530'>";
+	var recs = out.split("<r>");
+	for(var i = 0; i <recs.length; i++){
+		body += "<tr>";
+		var flds = recs[i].split("<i>");
+		for(var j = 0; j <flds.length; j++){
+			if(j!=4){
+				body += "<td>  " + flds[j] + "  </td>";
+			}else{
+ 				body += "<tr><td colspan='4'> " + flds[j] + "</td></tr>"; 
+			}
+		}
+	}
+	body += "</table>";
+	$("#show").html(body);
+}
+</script>
+</head>
+<body bgcolor="#cadbdb">
+<h2 id="page" style="color: #aa0022">Xmasパーティ掲示板
+	<input type="button" id="three" value=" ３行表示 "/>
+	<input type="button" id="ten" value=" ６行表示 "/>
+	<input type="button" id="all" value=" 全行表示 "/>
+</h2>
+<span id="stat"></span>
+<div id="show"></div>
+<hr/>
+<table>
+	<tr>
+		<td>名前：<input type='text' id='name'></td>
+		<td>Email:<input type='text' size='24' id='email'/></td>
+		<td><input type='button' id='add' value='　書き込み　'></td>
+	</tr>
+	<tr>
+		<td colspan='3'><textarea id='msg' rows='4' cols='62'></textarea></td>
+	</tr>
+</table>
+</body>
+</html>
+

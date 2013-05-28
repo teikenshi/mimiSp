@@ -1,0 +1,25 @@
+@charset "utf-8";
+html{
+}
+
+body{
+font-family:sans-serif;
+font-size:12px;
+overflow-x:hidden;
+background:url(../img/a.jpg) ;
+}
+
+a:link{
+color:#066;
+}
+
+#wrap{
+font-size:12px;
+}
+
+#head{
+box-shadow:0 2px 4px #ccc;
+}
+#head h1 img{
+width:100%;
+}

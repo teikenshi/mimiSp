@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* Layout */
+html{
+}
+
+body{
+font-family:sans-serif;
+background:url(../img/teiji.png) no repeat;
+
+}
+
+header{
+width:100%;
+height:235px;
+padding:110px 10px 0 10px;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+background:url(../img/top.jpg) no-repeat 0 0;
+-webkit-background-size:100% auto;
+background-size:cover;
+}
+
+header h1{
+margin:0 0 2px 0;
+font-size:18px;
+font-weight:bold;
+color:#390;
+}
+
+header h2{
+font-size:12px;
+font-weight:normal;
+color:#390;
+}
+
+nav{
+-webkit-box-shadow:0 2px 4px #060;
+box-shadow:0 2px 4px #060;
+}
+
+nav ul{
+}
+
+nav ul:after{
+content:"";
+clear:both;
+display:block;
+}
+
+nav ul li{
+float:left;
+width:25%;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+background:-webkit-gradient(linear, left top, left bottom, color-stop(1.00, #D7DFE2), color-stop(0.00, #fff));
+background:-webkit-linear-gradient(top, #fff 0%, #D7DFE2 100%);
+background:-moz-linear-gradient(top, #fff 0%, #D7DFE2 100%);
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffffff', endColorstr='#ffD7DFE2', GradientType=0 );
+background:linear-gradient(top, #fff 0%, #D7DFE2 100%);
+border:#C0CCC6 solid 1px;
+}
+
+nav ul li a{
+display:block;
+height:22px;
+padding:58px 0 0 0;
+font-size:17px;
+color:#fff;
+font-weight:bold;
+text-align:center;
+text-decoration:none;
+background:url(../img/teiji1.png) no-repeat 50% 0px;
+background-size:100% 100%;
+-webkit-background-size:100% 100%;
+}
